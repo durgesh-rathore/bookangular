@@ -9,7 +9,7 @@ import { CategoryService } from '../category.service';
   styleUrls: ['./view-category.component.css']
 })
 export class ViewCategoryComponent implements OnInit {
- fileList:any
+ fileList:any[]=[];
  
   constructor(private _service:CategoryService,private router:Router) { 
     console.log(this.fileList);  
@@ -25,7 +25,8 @@ export class ViewCategoryComponent implements OnInit {
   deleteCategory(ID:any,SNo:number){
     this._service.deleteCategory(ID).subscribe(result=>{
 if(result){
-      this.fileList.splice('SNo',1);
+      console.log("This serial number"+SNo);
+      this.fileList.splice(SNo,1);
       alert('Delete item sucessfully');
 }
       else
