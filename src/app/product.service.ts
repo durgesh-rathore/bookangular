@@ -2,9 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProductService {
   addProductUrl="https://angularapi-api.herokuapp.com/api/product/add";
   viewProductUrl="https://angularapi-api.herokuapp.com/api/product/product-list";
@@ -18,7 +16,7 @@ export class ProductService {
        return this.http.get(this.viewProductUrl);
      }
      deleteProduct(Pid:any):Observable<any>{
-       return this.http.post(this.deleteProductUrl,{Id:Pid})
+       return this.http.post(this.deleteProductUrl,{id:Pid})
        
      }
 }

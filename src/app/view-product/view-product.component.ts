@@ -14,6 +14,19 @@ export class ViewProductComponent implements OnInit {
     })
    }
 
+   deleteProductHtml(PId:any,SNo:any){
+     confirm("Are your sure");
+     this.product.deleteProduct(PId).subscribe(result=>{
+       if(result){
+        this.productList.splice(SNo,1);
+        // alert("Delete succesfully")
+       }
+        else
+        alert("faild to delete");
+      //  this.productList=result;
+     })
+   }
+
   ngOnInit(): void {
   }
 

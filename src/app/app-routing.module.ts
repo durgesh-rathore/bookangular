@@ -10,6 +10,7 @@ import { ViewCategoryComponent } from './view-category/view-category.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AuthGuard } from './auth.guard';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 
 const routes: Routes = 
@@ -25,6 +26,9 @@ const routes: Routes =
       component:AddProductComponent,
        canActivate:[AuthGuard]
     },
+    {path:"viewProduct",
+      component:ViewProductComponent,
+     canActivate:[AuthGuard]},
     {path:"edit-category/:cid/:categoryName",component:EditCategoryComponent},
     {path:"**",component:PageNotFoundComponent}
     
