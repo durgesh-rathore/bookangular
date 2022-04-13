@@ -17,6 +17,8 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { TokenAuthService } from './token-auth.service';
  import { map } from 'rxjs';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { ViewProductComponent } from './view-product/view-product.component';
+import { ProductService } from './product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { EditCategoryComponent } from './edit-category/edit-category.component';
     CategoryComponent,
     ViewCategoryComponent,
     AddProductComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    ViewProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import { EditCategoryComponent } from './edit-category/edit-category.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService,CategoryService,
+  providers: [UserService,CategoryService,ProductService,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:TokenAuthService,
