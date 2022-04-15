@@ -34,9 +34,9 @@ if(result){
     })
   }
   
-  EditCategory(id:any,categoryName:any){
-    console.log(categoryName);
-    this.router.navigate(['edit-category',id,categoryName])
+  editCategory(id:any){
+    // console.log();
+    this.router.navigate(['edit-category',id])
   }
   ngOnInit(): void {
   }

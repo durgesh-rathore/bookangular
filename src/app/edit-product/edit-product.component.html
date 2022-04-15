@@ -1,0 +1,53 @@
+<div class="form-group">
+    <input type="text" [(ngModel)]='productName' class=form-control name="productName">
+</div>
+<div class="container">
+   <img src="{{productImageUrl}}" alt="loading" width="300px" height="200px"> <br>
+ 
+ <input type="text" [(ngModel)]='productQty' name="productQty">
+ <input type="text" [(ngModel)]='productDiscount' name="productDiscount">
+ <input type="text" [(ngModel)]='productDescription' name="productDescription">
+
+
+ <select class="form-group" name="categoryId" [(ngModel)]="categoryId">
+    <option *ngFor="let c of categoryList" [value]=c._id name="categoryId">{{c.categoryName}}</option>
+  
+  </select>
+  
+
+</div>
+<!--         //////////////////////// -->
+<!-- <div class="container">
+    <form >
+      <p class="form-group">
+        <input type="text" [(ngModel)]="productName" class="form-control" placeholder="Enter the product Name" name="productName" id="">
+      </p>
+      <p class="form-group">
+        <input type="text" [(ngModel)]="productPrice" class="form-control" placeholder="Enter the Price" name="productPrice" id="">
+      </p>
+      <p class="form-group">
+           <input type="text" [(ngModel)]="productQty" class="form-control" placeholder="Enter the Qty" name="productQty" id="">
+      </p>
+      <p class="form-group">
+        <input type="file" (value)="" (change)="selectImage($event)" name="ProductImage" class="form-control"   placeholder="Select Product Images" id="">
+      </p>
+     
+       
+<select class="form-group" name="categoryId" [(ngModel)]="categoryId">
+  <option *ngFor="let c of categoryList" [value]=c._id name="categoryId">{{c.categoryName}}</option>
+
+</select>
+     
+      <p class="form-group">
+             <input type="text" [(ngModel)]="productDiscount" class="form-control" placeholder="Enter the Discount" name="productQty" id="">
+   </p>
+      <p class="form-group">
+        <input type="text" [(ngModel)]="productDescription" class="form-control" placeholder="Enter Description of product" name="productDescrition" id="">
+      </p>
+      <p class="form-group">
+          <button type="submit" (click)="addProductHtml()" class="btn btn-primary">
+            AddProduct
+          </button>
+      </p>
+    </form>
+    </div> -->

@@ -1,5 +1,5 @@
- <p>view-product works!</p>
- <p>view-category works!</p> 
+ <!-- <p>view-product works!</p>
+ <p>view-category works!</p>  -->
 
  <table class="table table-danger">
     <thead>
@@ -29,9 +29,9 @@
              
              
              <!-- <td>{{product.product}}</td> -->
-             
+             <td> <button class="btn btn-danger" (click)="editProductHtml(product._id)">Edit </button></td> 
             <td> <button class="btn btn-primary" (click)="deleteProductHtml(product._id,SNo)">Delete</button></td>
-            <!-- <td> <button class="btn btn-danger" (click)="EditProduct(product._id,product.productName)">Edit </button></td> -->
+            
         
         </tr>
     </tbody>

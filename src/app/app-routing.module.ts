@@ -11,6 +11,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { AuthGuard } from './auth.guard';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 const routes: Routes = 
@@ -29,7 +30,8 @@ const routes: Routes =
     {path:"viewProduct",
       component:ViewProductComponent,
      canActivate:[AuthGuard]},
-    {path:"edit-category/:cid/:categoryName",component:EditCategoryComponent},
+    {path:"edit-category/:cid",component:EditCategoryComponent},
+    {path:"edit-product/:pid",component:EditProductComponent},
     {path:"**",component:PageNotFoundComponent}
     
   ];
