@@ -19,6 +19,8 @@ import { TokenAuthService } from './token-auth.service';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ProductService } from './product.service';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ViewCartComponent } from './view-cart/view-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { ProductService } from './product.service';
     AddProductComponent,
     EditCategoryComponent,
     ViewProductComponent,
-    AddProductComponent
+    AddProductComponent,
+    EditProductComponent,
+    ViewCartComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,12 @@
           <a *ngIf="cheackTokenHtml()" class="nav-link" routerLink="addProduct">Add Product</a>
         </li>
         <li class="nav-item">
+          <a *ngIf="cheackTokenHtml()" class="nav-link" routerLink="viewProduct">View Product</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="cheackTokenHtml()" class="nav-link" routerLink="viewCart">View Cart</a>
+        </li>
+        <li class="nav-item">
           <a *ngIf="cheackTokenHtml()" class="nav-link" (click)="SignOut()">SignOUt</a>
         </li>
       </ul>

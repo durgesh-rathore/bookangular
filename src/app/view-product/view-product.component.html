@@ -1,7 +1,7 @@
-<p>view-product works!</p>
-<!-- <p>view-category works!</p> -->
+<!-- <p>view-product works!</p>
+<p>view-category works!</p> -->
 
-<!-- <table class="table table-danger">
+ <table class="table table-danger">
     <thead>
         <tr>
             <th>SNo.</th>
@@ -9,17 +9,20 @@
             <th>Image</th>
             <th>Edit</th>
             <th>Delete</th>
+            <th>AddCart</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let product of productList; index as SNo">
-             <td>5</td> 
+
             <td>{{SNo+1}}</td>
-            <td>{{product.categoryName}}</td>
+            <td>{{product.productName}}</td>
             <td> <img  width="100px 100px" src={{product.productImageUrl}} alt="loading"> </td>
-            <td> <button class="btn btn-primary" (click)="deleteProduct(product._id,SNo)">Delete</button></td>
-            <td> <button class="btn btn-danger" (click)="EditProduct(product._id,product.productName)">Edit </button></td>
-            <td> >Edit</a></td> 
+            <td> <button class="btn btn-primary" (click)="deleteProduct(product._id,SNo)">Delete</button></td> 
+            <td> <button class="btn btn-danger" (click)="EditProduct(product._id)">Edit </button></td>
+            <td> <button class="btn btn-danger" (click)="addToCartHtml(product._id)">+cart</button></td>
+            <!-- <td> <button class="btn btn-danger" (click)="EditProduct(product._id)"> </button></td> -->
+            
         </tr>
     </tbody>
-</table> -->
+</table> 

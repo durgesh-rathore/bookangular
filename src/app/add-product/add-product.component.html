@@ -15,7 +15,7 @@
       </p>
      
        
-<select class="form-group" name="categoryId" [(ngModel)]="categoryId">
+<select class="form-control mb-3 " name="categoryId" [(ngModel)]="categoryId">
   <option *ngFor="let c of categoryData" [value]=c._id name="categoryId">{{c.categoryName}}</option>
 
 </select>
