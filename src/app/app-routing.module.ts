@@ -12,6 +12,7 @@ import { AuthGuard } from './auth.guard';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { OrderComponent } from './order/order.component';
 
 
 const routes: Routes = 
@@ -25,6 +26,10 @@ const routes: Routes =
   },
     {path:"addProduct",
       component:AddProductComponent,
+       canActivate:[AuthGuard]
+    },
+    {path:"orderPlace",
+      component:OrderComponent,
        canActivate:[AuthGuard]
     },
     {path:"viewProduct",

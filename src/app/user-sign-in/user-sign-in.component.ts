@@ -14,8 +14,9 @@ export class UserSignInComponent implements OnInit {
   userSignIn(){
     this._service.check(this.userEmail,this.userPassword).subscribe(result=>{
       if(result){
-        
+        console.log(result)
         localStorage.setItem('token-jwt',result.token);
+        localStorage.setItem('userId',result.current_user._id);
         alert("your login sucessfull");
         this.router.navigate(['addCategory']);
       }
